@@ -3,7 +3,7 @@ import { FaArrowRight } from 'react-icons/fa';
 
 const Blog = () => {
     return (
-        <div className='mt-[150px] px-[120px]'>
+        <div className='mt-[150px] lg:px-[120px] px-4'>
              {/* Header */}
               <div className="w-[448px] mx-auto text-center">
         <h3 className="text-xl rounded-lg highlight highlight_bg w-[147px] h-8 mx-auto">
@@ -16,7 +16,7 @@ const Blog = () => {
       </div>
 
       {/* blog */}
-      <div className='mt-[40px] grid grid-cols-3 gap-6'>
+      <div className='mt-[40px] grid lg:grid-cols-3 gap-6 grid-cols-1'>
         {/* div 1 */}
             <div className=''>
                 <img src="/image/veg1.jpg" alt="vegetables" className='w-full h-[260px] mb-6 rounded-[20px] object-cover'/>

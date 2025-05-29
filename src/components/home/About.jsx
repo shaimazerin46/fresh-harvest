@@ -4,11 +4,11 @@ import { FaCanadianMapleLeaf } from "react-icons/fa";
 
 const About = () => {
     return (
-        <div className="flex mt-[170px] items-center px-[120px] justify-between">
+        <div className="flex flex-col lg:flex-row mt-[170px] items-center lg:px-[120px] justify-between px-4">
             <div className="relative" >
-                <Image src='/image/man.png' alt="a man with vegetables" width={684} height={570}></Image>
+                <img src='/image/man.png' alt="a man with vegetables"  className="w-[648px] h-[570px] object-cover"></img>
                
-                    <div className="font-bold rounded-lg highlight absolute flex items-center gap-1 rounded-xl text-[39px] bg-white p-4 right-40 bottom-40" >
+                    <div className="font-bold rounded-lg highlight absolute flex items-center gap-1 text-[39px] bg-white p-4 right-40 bottom-40" >
                         <FaCanadianMapleLeaf />
                         <p className="text-black">Fresh Harvest</p>
                     </div>
@@ -23,9 +23,9 @@ const About = () => {
                 
             </div>
 
-            <div className="w-[461px]">
-                <h3 className='text-xl highlight highlight_bg w-[108px] h-8 text-center'>About us</h3>
-                <h3 className='text-[48px] my-5 font-[500px]'>About fresh harvest</h3>
+            <div className="lg:w-[461px]">
+                <h3 className='text-xl mt-5 lg:mt-0 highlight highlight_bg w-[108px] h-8 text-center'>About us</h3>
+                <h3 className='lg:text-[48px] text-[32px] my-5 font-bold'>About fresh harvest</h3>
                 <p className="lite_font">Welcome to Fresh Harvest, your premier destination for high-quality and fresh produce. We are passionate about providing you with the finest fruits, vegetables, and salad ingredients to nourish your body and delight your taste buds. With a commitment to excellence, sustainability, and customer satisfaction, Fresh Harvest is here to revolutionize your grocery shopping experience.</p>
                 <button className="py-3 mt-4 w-[154px] text-center rounded-xl border-[1px] text-[#FF6A1A] border-[#FF6A1A] text-[18px]">Read More</button>
             </div>

@@ -7,9 +7,9 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 
 const Footer = () => {
     return (
-        <div className="mt-[150px] px-[120px] relative">
+        <div className="mt-[150px] lg:px-[120px] relative px-4 ">
 
-            <div className=" grid grid-cols-2">
+            <div className=" grid lg:grid-cols-2 grid-cols-1 lg:gap-0 gap-5">
                 {/* col 1 */}
                 <div>
                     <div className="font-bold highlight flex items-center gap-1 text-[39px]" href='/'>
@@ -60,7 +60,7 @@ const Footer = () => {
 
             {/* download section */}
 
-              <div className='mt-[25px] absolute'>
+              <div className='lg:mt-[25px] absolute mt-[105px]'>
                                     <span className='lite_font font-bold text-xs rubik'>Download APP:</span>
                                     <div className='mt-[12px] flex gap-4'>
                                         <div className='w-[139px] p-[3px] h-[45px] flex items-center bg-black text-white rounded-lg'>
@@ -85,7 +85,7 @@ const Footer = () => {
             </div>
 
                                 {/* Payment section */}
-            <div className="absolute right-[150px] ">
+            <div className="absolute lg:right-[150px] mt-5 lg:mt-0">
                 <span className="text-xs rubik mb-3 font-bold  text-black">Accepted Payment Methods:</span>
                 <div className="flex w-[229px] justify-between">
                     <img src="https://img.icons8.com/?size=50&id=1429&format=png" alt="" className="w-[70px]"/>
@@ -97,7 +97,7 @@ const Footer = () => {
             </div>
 
             {/* copywrite */}
-            <div className="flex justify-between mt-[150px] items-center pb-[33px]">
+            <div className="flex justify-between lg:mt-[150px] items-center pb-[33px] mt-[200px]">
                 <span className="rubik text-xs font-bold">© Copyright 2024, All Rights Reserved by Banana Studio</span>
                 <div className="flex w-[124px] justify-between text-[32px] text-black">
                     <AiFillTwitterCircle />
