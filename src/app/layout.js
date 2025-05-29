@@ -1,5 +1,6 @@
 import { Questrial, Rubik } from 'next/font/google';
 import "./globals.css";
+import Navbar from '@/components/shared/Navbar';
 
 const rubik = Rubik({
   subsets: ['latin'],
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
       <body
        className={`${rubik.variable} ${questrial.variable}`}
       >
+        <Navbar></Navbar>
         {children}
       </body>
     </html>
