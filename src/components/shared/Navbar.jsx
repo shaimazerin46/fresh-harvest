@@ -29,7 +29,7 @@ const Navbar = () => {
   </div>
 
 
-  <div className="flex space-x-5 lg:text-white lg:text-sm text-2xl ml-[175px]">
+  <div className="flex space-x-5 lite_font lg:text-sm text-2xl ml-[175px]">
     <button className="lg:flex hidden items-center gap-1">
       <FaHeart />
       Favoutite

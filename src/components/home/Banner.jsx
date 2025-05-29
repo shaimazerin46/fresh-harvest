@@ -6,27 +6,27 @@ const Banner = () => {
     return (
         <div
             style={{
-                backgroundImage: 'url(/image/banner.jpg)',
+                backgroundImage: 'url(/image/bg.jpg)',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
                 backgroundSize: 'cover' 
             }}
-            className='object-cover w-full px-[120px]  relative'>
+            className='object-cover lg:h-[1000px] lg:w-full lg:px-[120px] px-4  relative'>
 
 
-                <div className='pt-[182px] w-[660px] pb-[172px]'>
+                <div className='pt-[182px] lg:w-[660px] lg:pb-[172px] relative'>
                     <div className='space-y-5 w-full'>
                         <h3 className='text-xl highlight highlight_bg w-[266px] h-8 rounded-lg text-center'>Welcome to fresh harvest</h3>
-                    <h3 className='text-[80px] font-[500px]'>Fresh Fruits and Vegetables</h3>
+                    <h3 className='lg:text-[80px] font-bold text-[48px] '>Fresh Fruits and Vegetables</h3>
                     <p className='text-sm lite_font'> At fresh harvest, we are passionate about providing you with the freshest and most flavoutful fruits and vegetables</p>
                     <button className='py-4 px-8 bg-[#FF6A1A] mt-10 text-white rounded-lg text-lg font-[600px]'>Shop now</button>
                     </div>
 
-                    <div className='grid grid-cols-2 mt-5'>
+                    <div className='mt-5 ml-10 lg:ml-0 lg:absolute lg:right-0'>
                         <div>
 
                         </div>
-                        <div className='flex items-center gap-1  bg-[#EBEBEB] px-4 py-2 w-[331px] h-[157px] rounded-xl'>
+                        <div className='flex items-center gap-1  bg-[#EBEBEB] px-4 py-2 w-[331px] h-[157px] rounded-xl '>
                             <div className='font-bold space-y-[3px]'>
                                 <h3 className='highlight text-sm'>Special offer</h3>
                                 <h3 className='text-[28px] font-[500px]'>Fresh salad</h3>
@@ -41,7 +41,7 @@ const Banner = () => {
 
                     </div>
 
-                    <div className='mt-[25px]'>
+                    <div className='mt-[25px] absolute lg:-bottom-32 -bottom-[700px]'>
                         <p className='lite_font'>Download APP:</p>
                         <div className='mt-[12px] flex gap-4'>
                             <div className='w-[139px] p-[3px] h-[45px] flex items-center bg-black text-white rounded-lg'>
@@ -70,7 +70,7 @@ const Banner = () => {
                     </div>
                 </div>
 
-                <div className='absolute bottom-0 right-0' >
+                <div className='lg:absolute bottom-0 right-0' >
                     <img className='object-cover w-full flex justify-end' src={"/image/girl.png"} ></img>
                 </div>
         </div>
