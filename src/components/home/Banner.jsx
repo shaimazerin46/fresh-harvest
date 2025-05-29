@@ -46,8 +46,8 @@ const Banner = () => {
                         <div className='mt-[12px] flex gap-4'>
                             <div className='w-[139px] p-[3px] h-[45px] flex items-center bg-black text-white rounded-lg'>
                                 <span className='text-2xl mr-1'><FaApple /></span>
-                                <div>
-                                    <p className='text-[10px]'>Download on the</p>
+                                <div className='flex flex-col'>
+                                    <span className='text-[10px]'>Download on the </span>
                                     <span className='text-lg'>Apple Store</span>
                                 </div>
                             </div>
@@ -56,9 +56,9 @@ const Banner = () => {
                                 <span className='mr-1'>
                                     <img src="https://img.icons8.com/?size=48&id=L1ws9zn2uD01&format=png" alt="" className='w-6'/>
                                 </span>
-                                <div>
-                                    <p className='text-[10px]'>Get it on</p>
-                                    <p className='text-lg'>Google Play</p>
+                                <div className='flex flex-col'>
+                                    <span className='text-[10px]'>Get it on</span>
+                                    <span className='text-lg'>Google Play</span>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +70,7 @@ const Banner = () => {
                     </div>
                 </div>
 
-                <div className='absolute bottom-0 right-12' >
+                <div className='absolute bottom-0 right-0' >
                     <img className='object-cover w-full flex justify-end' src={"/image/girl.png"} ></img>
                 </div>
         </div>
