@@ -9,6 +9,9 @@ p {
   font-size: 14px;
   
 }
+span{
+  font-family: var(--font-questrial), sans-serif;
+}
 .highlight{
   color: #749B3F;
 }
@@ -21,3 +24,8 @@ p {
 .lite_font{
   color: #4A4A52;
 }
+.slick-dots li button:before {
+  color: #749B3F !important ;
+  font-size: 20px  !important;
+}
+

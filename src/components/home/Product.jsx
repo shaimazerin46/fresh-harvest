@@ -11,12 +11,12 @@ const Product = () => {
     fetch("/api/v1/category")
       .then((res) => res.json())
       .then((data) => {
-        // Filter out "Drinksss" category
+       
         const filtered = data.data.filter(
           (cat) => cat.categoryName.toLowerCase() !== "drinksss"
         );
 
-        // Add "All" manually
+        
         const all = { id: "all", categoryName: "All" };
         setCategories([all, ...filtered]);
       });

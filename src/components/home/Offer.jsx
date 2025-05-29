@@ -5,7 +5,7 @@ const Offer = () => {
         <div
          className="mt-[150px] h-[640px] bg-[#f7f6f6] px-[120px] flex items-center">
             <div className="w-[835px]">
-                 <h3 className='text-xl highlight highlight_bg w-[143px] h-8 text-center'>Special Offer</h3>
+                 <h3 className='text-xl rounded-lg highlight highlight_bg w-[143px] h-8 text-center'>Special Offer</h3>
                  <h3 className="text-[80px] font-[500px]">Seasonal Fruit Bundle</h3>
                  <h3 className="text-[48px] font-[500px]">Discount up to <span className="text-[#FF6A1A]">80% OFF</span></h3>
                  <div className="flex justify-between w-[464px]">

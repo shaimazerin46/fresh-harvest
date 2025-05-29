@@ -2,6 +2,7 @@ import About from "@/components/home/About";
 import Banner from "@/components/home/Banner";
 import Offer from "@/components/home/Offer";
 import Product from "@/components/home/Product";
+import Testimonial from "@/components/home/Testimonial";
 import Image from "next/image";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
    <Product></Product>
    <About></About>
    <Offer></Offer>
+   <Testimonial></Testimonial>
    </div>
   );
 }
