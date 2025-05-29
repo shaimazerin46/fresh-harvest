@@ -11,7 +11,7 @@ const Navbar = () => {
    <Link href='/'><p>Blog</p></Link>
   </>
     return (
-        <div className="navbar absolute top-0 left-0 right-0 bg-transparent px-[120px] z-10">
+        <div className="navbar h-[100px] absolute top-0 left-0 right-0 bg-transparent px-[120px] z-10">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -23,17 +23,17 @@ const Navbar = () => {
        {menu}
       </ul>
     </div>
-    <Link className="font-bold highlight flex items-center gap-1 text-2xl" href='/'>
+    <Link className="font-bold highlight flex items-center gap-1 text-[39px]" href='/'>
    <FaCanadianMapleLeaf />
     <p className="text-black">Fresh Harvest</p>
     </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal space-x-16 lite_font">
+    <ul className="menu menu-horizontal space-x-16 lite_font text-sm">
      {menu}
     </ul>
   </div>
-  <div className="navbar-end flex space-x-5">
+  <div className="navbar-end flex space-x-5 text-white text-sm">
     <button className="flex items-center gap-1">
       <FaHeart />
       Favoutite
@@ -42,7 +42,7 @@ const Navbar = () => {
      <FaCartShopping />
       Cart
     </button>
-    <button className="btn border-[1px] bg-transparent">
+    <button className="btn border-[1px] border-white text-white bg-transparent shadow-none">
      Sign in
     </button>
   </div>
