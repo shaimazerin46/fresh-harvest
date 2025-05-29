@@ -16,7 +16,7 @@ export default function Home() {
    <Offer></Offer>
    <Testimonial></Testimonial>
    <Blog></Blog>
-   <Footer></Footer>
+  
    </div>
   );
 }

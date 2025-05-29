@@ -16,7 +16,7 @@ const About = () => {
                     <div className="absolute p-[6px] h-[192px] w-[150px] bg-white right-25 -bottom-10 rounded-xl">
                         <img src="/image/latus.jpg" alt="" className="w-[106] h-[106] object-cover mx-auto"/>
                         <h3 className="text-[9.6px] text-center">Mushroom</h3>
-                        <span className="text-[9.6px] text-center lite_font">$2.3/kg</span>
+                        <p className="small_text text-center lite_font">$2.3/kg</p>
                         <button className="px-11 py-1 flex justify-center items-center border-[1px] border-gray-200 text-[9.6px] left-40">Add to cart</button>
 
                     </div>
