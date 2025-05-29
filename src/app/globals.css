@@ -9,6 +9,12 @@ p {
   font-size: 14px;
   
 }
+.rubik{
+  font-family: var(--font-rubik), sans-serif;
+}
+.questrial{
+  font-family: var(--font-questrial), sans-serif;
+}
 span{
   font-family: var(--font-questrial), sans-serif;
 }

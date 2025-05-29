@@ -16,7 +16,7 @@ const Banner = () => {
 
                 <div className='pt-[182px] w-[660px] pb-[172px]'>
                     <div className='space-y-5 w-full'>
-                        <h3 className='text-xl highlight highlight_bg w-[266px] h-8 text-center'>Welcome to fresh harvest</h3>
+                        <h3 className='text-xl highlight highlight_bg w-[266px] h-8 rounded-lg text-center'>Welcome to fresh harvest</h3>
                     <h3 className='text-[80px] font-[500px]'>Fresh Fruits and Vegetables</h3>
                     <p className='text-sm lite_font'> At fresh harvest, we are passionate about providing you with the freshest and most flavoutful fruits and vegetables</p>
                     <button className='py-4 px-8 bg-[#FF6A1A] mt-10 text-white rounded-lg text-lg font-[600px]'>Shop now</button>

@@ -8,7 +8,7 @@ const About = () => {
             <div className="relative" >
                 <Image src='/image/man.png' alt="a man with vegetables" width={684} height={570}></Image>
                
-                    <div className="font-bold highlight absolute flex items-center gap-1 rounded-xl text-[39px] bg-white p-4 right-40 bottom-40" >
+                    <div className="font-bold rounded-lg highlight absolute flex items-center gap-1 rounded-xl text-[39px] bg-white p-4 right-40 bottom-40" >
                         <FaCanadianMapleLeaf />
                         <p className="text-black">Fresh Harvest</p>
                     </div>
