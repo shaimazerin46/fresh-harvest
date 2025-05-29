@@ -7,9 +7,9 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 
 const Footer = () => {
     return (
-        <div className="mt-[150px] lg:px-[120px] relative px-4 ">
+        <div className="mt-[150px] lg:px-[120px] relative px-4 bg-[#F4F6F6] pt-[64px]">
 
-            <div className=" grid lg:grid-cols-2 grid-cols-1 lg:gap-0 gap-5">
+            <div className=" grid lg:grid-cols-2  grid-cols-1 lg:gap-0 gap-5">
                 {/* col 1 */}
                 <div>
                     <div className="font-bold highlight flex items-center gap-1 text-[39px]" href='/'>

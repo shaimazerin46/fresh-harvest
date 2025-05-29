@@ -43,7 +43,7 @@ const Navbar = () => {
      <span className="lg:inline hidden"> Cart</span>
     </button>
     
-    <button className="btn hidden lg:inline border-[1px] border-white text-white bg-transparent shadow-none">
+    <button className="btn hidden lg:inline border-[1px] border-[#4A4A52] lite_font bg-transparent shadow-none">
      Sign in
     </button>
   </div>

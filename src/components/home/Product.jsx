@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const Product = () => {
@@ -67,8 +68,9 @@ const Product = () => {
       {/* Products Grid */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-8 px-4 lg:px-[120px]">
         {filteredProducts.map((product) => (
+         <Link  key={product.id} href={`/details/${product.id}`}>
           <div
-            key={product.id}
+           
             className="p-4 shadow-sm h-[360px] space-y-3"
           >
             <img
@@ -81,6 +83,7 @@ const Product = () => {
             <button className="py-3 border-[1px] border-gray-200 w-full text-center hover:text-white rounded-xl hover:bg-[#FF6A1A] text-[18px]">Add to cart</button>
             
           </div>
+         </Link>
         ))}
       </div>
 

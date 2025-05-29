@@ -9,7 +9,7 @@ const Blog = () => {
         <h3 className="text-xl rounded-lg highlight highlight_bg w-[147px] h-8 mx-auto">
          Our Blog
         </h3>
-        <h3 className="text-[48px] font-semibold">Fresh Harvest Blog</h3>
+        <h3 className="lg:text-[48px] text-[32px] font-semibold">Fresh Harvest Blog</h3>
         <p className="text-center">
           Welcome to the Fresh Harvest Blog, your go-to resource for all things related to fresh produce, healthy eating, and culinary inspiration.
         </p>
