@@ -38,6 +38,5 @@ Fresh Harvest is a modern e-commerce platform built with **Next.js 14**, **Tailw
  ```bash
  vercel --prod
 
-### Live Link: https://fresh-harvest-opal.vercel.app/
 
 
