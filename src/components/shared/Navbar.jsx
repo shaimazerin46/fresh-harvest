@@ -41,6 +41,7 @@ const Navbar = () => {
     }
   } catch (error) {
     alert("Login failed. Try again.");
+    router.push("/");
   }
 };
 
@@ -87,14 +88,14 @@ const Navbar = () => {
       </div>
 
 
-      <div className="hidden lg:flex ml-[186px]">
+      <div className="hidden md:flex ">
         <ul className="menu menu-horizontal space-x-16 lite_font text-sm">
           {menu}
         </ul>
       </div>
 
 
-      <div className="flex space-x-5 lite_font lg:text-sm text-2xl lg:ml-[175px]">
+      <div className="flex space-x-5 lite_font lg:text-sm text-2xl ">
         <button className="lg:flex hidden items-center gap-1">
           <FaHeart />
           Favoutite

@@ -113,7 +113,7 @@ function DetailsPage() {
         </div>
       </div>
 
-      <div className="lg:w-[894px] py-[40px] lg:px-8 px-4 mx-auto bg-[#F4F6F6]">
+      <div className="lg:w-[894px] py-[40px] lg:px-8 px-4  bg-[#F4F6F6]">
         <span className="text-lg">{item?.description}</span>
       </div>
 
