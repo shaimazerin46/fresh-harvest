@@ -49,24 +49,25 @@ function DetailsPage() {
   };
 
   return (
-    <div className="pt-[132px] lg:px-[120px] px-4">
+    <div className="pt-[132px] lg:px-[120px] px-4 overflow-x-hidden">
       {/* Details Section */}
-      <div className="lg:flex items-center justify-between">
+      <div className="grid lg:grid-cols-2 grid-cols-1">
         <div>
-          <Image
+          {/* <Image
             src={item?.images[0]}
             width={566}
             height={566}
             alt="product image"
-            className="lg:h-[500px] lg:w-[400px] object-cover mx-auto"
-          />
+            className="object-cover w-[300px] lg:h-[500px] lg:w-[400px]  flex justify-center mx-auto"
+          /> */}
+          <img src={item?.images[0]} alt="" className="object-cover  lg:h-[500px] lg:w-[400px]  flex justify-center mx-auto"/>
         </div>
-        <div className="lg:w-[588px]">
+        <div className="lg:w-[588px] mt-15 lg:mt-0 mx-auto">
           <div className="space-y-5">
-            <h3 className="text-xl highlight highlight_bg px-3 rounded-lg text-center inline py-2">
+            <h3 className="text-xl highlight highlight_bg px-3 rounded-lg text-center inline py-2 lg:mt-0 mt-15 ">
               {getCategoryNameById(item?.categoryId)}
             </h3>
-            <h2 className="text-[48px] font-bold">{item?.productName}</h2>
+            <h2 className="lg:text-[48px] text-[32px] lg:mt-0 mt-5 font-bold">{item?.productName}</h2>
             <div className="flex gap-3 items-center">
               <div className="flex gap-1 text-xl text-[#FFB848]">
                 {[...Array(5)].map((_, i) => (
@@ -78,7 +79,7 @@ function DetailsPage() {
               </p>
             </div>
             <span className="text-[32px] block font-bold">${item?.price}/kg</span>
-            <span className="text-lg">{item?.description}</span>
+            <span className="lg:text-lg text-sm">{item?.description}</span>
 
             <Quantity />
 
@@ -112,7 +113,7 @@ function DetailsPage() {
         </div>
       </div>
 
-      <div className="lg:w-[894px] py-[40px] px-8 bg-[#F4F6F6]">
+      <div className="lg:w-[894px] py-[40px] lg:px-8 px-4 mx-auto bg-[#F4F6F6]">
         <span className="text-lg">{item?.description}</span>
       </div>
 

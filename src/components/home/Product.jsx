@@ -64,11 +64,11 @@ const Product = () => {
   return (
     <div className="mt-[200px]">
       {/* Header */}
-      <div className="w-[448px] mx-auto text-center">
+      <div className="lg:w-[448px] mx-auto text-center px-4 lg:px-0">
         <h3 className="text-xl rounded-lg highlight highlight_bg w-[147px] h-8 mx-auto">
           Our product
         </h3>
-        <h3 className="text-[48px] font-semibold">Our Fresh Products</h3>
+        <h3 className="lg:text-[48px] text-[32px] font-semibold">Our Fresh Products</h3>
         <p className="text-center">
           We pride ourselves on offering a wide variety of fresh and flavourful
           fruits, vegetables, and salad ingredients.

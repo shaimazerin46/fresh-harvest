@@ -12,7 +12,7 @@ const Footer = () => {
             <div className=" grid lg:grid-cols-2  grid-cols-1 lg:gap-0 gap-5">
                 {/* col 1 */}
                 <div>
-                    <div className="font-bold highlight flex items-center gap-1 text-[39px]" href='/'>
+                    <div className="font-bold highlight flex items-center gap-1 lg:text-[39px]" href='/'>
                         <span className="text-[52px]"> <FaCanadianMapleLeaf /></span>
                         <span className="text-black text-2xl">Fresh Harvests</span>
                     </div>
@@ -22,7 +22,7 @@ const Footer = () => {
                 <div className="flex justify-between">
                     <div>
                         <ul className="text-[14px] lite_font space-y-3 questrial">
-                            <li className="text-lg  font-bold rubik text-black">Quick links 1</li>
+                            <li className="lg:text-lg text-sm font-bold rubik text-black">Quick links 1</li>
                             <li>Home</li>
                             <li>Shop</li>
                             <li>About us</li>
@@ -33,7 +33,7 @@ const Footer = () => {
 
                     <div>
                         <ul className="text-[14px] lite_font space-y-3 questrial">
-                            <li className="text-lg  font-bold rubik text-black">Quick links 2</li>
+                            <li className="lg:text-lg text-sm font-bold rubik text-black">Quick links 2</li>
                             <li>Favorites</li>
                             <li>Cart</li>
                             <li>Sign in</li>
@@ -45,7 +45,7 @@ const Footer = () => {
 
                     <div>
                         <ul className="text-[14px]  lite_font space-y-3 questrial">
-                            <li className="text-lg font-bold  rubik text-black">Contact us</li>
+                            <li className="lg:text-lg text-sm font-bold  rubik text-black">Contact us</li>
                             <li className="flex items-center gap-1"><CiPhone /> 1234 5678 90</li>
 
                             <li className="flex items-center gap-1"><MdOutlineEmail />Freshharvests@gmail.com</li>
