@@ -27,16 +27,19 @@ Fresh Harvest is a modern e-commerce platform built with **Next.js 14**, **Tailw
 
    ```bash
    npm run dev
-
-### 🏗️ Build the Project for Production
-   ```bash
-    npm run build
-    npm start
-
+   
 ### 🌍 Deploying to Vercel
 
  ```bash
- vercel --prod
+   npm run dev
+
+### 🏗️ Build the Project for Production
+
+    ```bash
+    npm run build
+    npm start
+
+
 
 
 
