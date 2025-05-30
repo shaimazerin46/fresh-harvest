@@ -1,46 +1,53 @@
-# Live Link- https://fresh-harvest-opal.vercel.app/
-# 🥬 Fresh Harvest - E-commerce Web App
+# Live link: https://fresh-harvest-opal.vercel.app/
 
-Fresh Harvest is a modern e-commerce platform built with **Next.js 14**, **Tailwind CSS**, and **NextAuth** for authentication. It supports user registration, login, and secure session handling using MongoDB as the database.
+# 🥬 Fresh Harvest
 
-## 🚀 Features
-
-- Next.js 14 App Router
-- Responsive design with Tailwind CSS
-- User Authentication (NextAuth + MongoDB)
-- Modal-based Login and Registration UI
-- Social Sign-In Buttons (Google, Facebook UI-ready)
+**Fresh Harvest** is a modern, responsive web application built with Next.js 14 that connects local farmers with customers. It allows users to explore and purchase fresh farm products directly, empowering local agriculture and ensuring quality.
 
 ---
 
-## 🚀 Project Setup & Deployment
+## 🚀 Tech Stack
 
-### 🧑‍💻 Running the Project Locally
-
-1. **Install Dependencies**
-
-   ```bash
-   npm install
-   npm run dev
-   
-2. **Create Environment Variables**
-3. **Start the Development Server**
-
-   ```bash
-   npm run dev
-   
-### 🌍 Deploying to Vercel
-
- ```bash
-   npm run dev
-
-### 🏗️ Build the Project for Production
-
-    ```bash
-    npm run build
-    npm start
+- **Framework**: [Next.js 14 (App Router)](https://nextjs.org/docs/app)
+- **UI Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Authentication**: [NextAuth.js](https://next-auth.js.org/) with MongoDB
+- **Database**: MongoDB 
+- **Deployment**: Vercel (frontend & backend)
 
 
+---
 
+## 🌟 Key Features
 
+- 🔐 **User Authentication** with [NextAuth.js](https://next-auth.js.org/) and MongoDB
+- 🛒 **Product Catalog** for users to browse & buy fresh goods
+- 💬 **Modal-based Login/Register UI** for smooth user experience
+- 🌐 **Social Sign-In** UI (Google, Facebook ready – Google fully functional by default)
+- 📱 **Responsive Design** with Tailwind CSS 
+- ✨ Modern UI with optimized performance and routing via App Router
+
+---
+
+1. Install Dependencies
+bash
+Copy
+Edit
+npm install
+2. Configure Environment Variables
+Create a .env.local file in the root directory.
+
+3. Run the Development Server
+bash
+Copy
+Edit
+npm run dev
+Open http://localhost:3000 to view it in the browser.
+
+📦 Building & Deployment
+Build Locally
+bash
+Copy
+Edit
+npm run build
+npm start
 
