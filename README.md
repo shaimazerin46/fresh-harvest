@@ -1,3 +1,4 @@
+# Live Link- https://fresh-harvest-opal.vercel.app/
 # 🥬 Fresh Harvest - E-commerce Web App
 
 Fresh Harvest is a modern e-commerce platform built with **Next.js 14**, **Tailwind CSS**, and **NextAuth** for authentication. It supports user registration, login, and secure session handling using MongoDB as the database.
