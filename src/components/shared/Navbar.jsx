@@ -57,10 +57,11 @@ const Navbar = () => {
 
     if (res?.success) {
       alert("Registration successful!");
-      form.reset(); // ✅ clear inputs
+      form.reset(); 
       setIsRegisterOpen(false); 
       setIsLoginOpen(true); 
-      setIsModalOpen(true); 
+      setIsModalOpen(false); 
+      router.push("/");
     } else {
       alert("Registration failed!");
     }
