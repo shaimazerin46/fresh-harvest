@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import { FaCanadianMapleLeaf } from "react-icons/fa";
 
 

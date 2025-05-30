@@ -5,12 +5,69 @@ import { FaCartShopping } from "react-icons/fa6";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
 import { CiSquareCheck } from "react-icons/ci";
+import { registerUser } from "@/app/actions/auth/registerUser";
+import { signIn} from "next-auth/react"
+import { useRouter } from "next/navigation";
+
 
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isRegisterOpen, setIsRegisterOpen] = useState(false);
+   const router = useRouter();
+
+ const handleLogin = async (e) => {
+  
+  e.preventDefault();
+  const form = e.target;
+  const email = form.email.value;
+  const password = form.password.value;
+
+  try {
+    const res = await signIn("credentials", {
+      email,
+      password,
+      redirect: false, 
+    });
+
+    if (res.ok) {
+      alert("Login successful!");
+      form.reset(); 
+      setIsModalOpen(false); 
+      router.push("/");
+    } else {
+      alert("Invalid credentials!");
+    }
+  } catch (error) {
+    alert("Login failed. Try again.");
+  }
+};
+
+
+  const handleRegister = async (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const name = form.name.value;
+  const email = form.email.value;
+  const password = form.password.value;
+
+  try {
+    const res = await registerUser({ name, email, password });
+
+    if (res?.success) {
+      alert("Registration successful!");
+      form.reset(); // ✅ clear inputs
+      setIsRegisterOpen(false); 
+      setIsLoginOpen(true); 
+      setIsModalOpen(true); 
+    } else {
+      alert("Registration failed!");
+    }
+  } catch (error) {
+    alert("An error occurred while registering.");
+  }
+};
 
   const menu = <>
     <Link href='/'><p>Home</p></Link>
@@ -73,16 +130,18 @@ const Navbar = () => {
               ✕
             </button>
             <h2 className="text-[32px] font-semibold mb-4 text-center">Login</h2>
-            <form className="space-y-4">
+            <form onSubmit={handleLogin} className="space-y-4">
               <label className="text-lg questrial">Email</label>
               <input
                 type="email"
+                name="email"
                 placeholder="Enter your email"
                 className="w-full px-4 py-2 border rounded mb-5"
               />
               <label className="text-lg questrial">Password</label>
               <input
                 type="password"
+                name="password"
                 placeholder="Enter your password"
                 className="w-full px-4 py-2 border rounded mb-5"
               />
@@ -131,22 +190,25 @@ const Navbar = () => {
         ✕
       </button>
       <h2 className="text-[32px] font-semibold mb-4 text-center">Sign Up</h2>
-      <form className="space-y-4">
+      <form onSubmit={handleRegister} className="space-y-4">
         <label className="text-lg questrial">Name</label>
         <input
           type="text"
+          name="name"
           placeholder="Enter your name"
           className="w-full px-4 py-2 border rounded mb-5"
         />
         <label className="text-lg questrial">Email</label>
         <input
           type="email"
+          name="email"
           placeholder="Enter your email"
           className="w-full px-4 py-2 border rounded mb-5"
         />
         <label className="text-lg questrial">Password</label>
         <input
           type="password"
+          name="password"
           placeholder="Create a password"
           className="w-full px-4 py-2 border rounded mb-5"
         />

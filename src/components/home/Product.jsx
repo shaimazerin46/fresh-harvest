@@ -7,32 +7,59 @@ const Product = () => {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
   const [selectedCategoryId, setSelectedCategoryId] = useState("all");
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/api/v1/category")
-      .then((res) => res.json())
-      .then((data) => {
-       
-        const filtered = data.data.filter(
+    const fetchData = async () => {
+      try {
+        const [catRes, prodRes] = await Promise.all([
+          fetch("/api/v1/category"),
+          fetch("/api/v1/products"),
+        ]);
+
+        if (!catRes.ok || !prodRes.ok) {
+          throw new Error("Failed to load data");
+        }
+
+        const catData = await catRes.json();
+        const prodData = await prodRes.json();
+
+        const filtered = catData.data.filter(
           (cat) => cat.categoryName.toLowerCase() !== "drinksss"
         );
-
-        
         const all = { id: "all", categoryName: "All" };
         setCategories([all, ...filtered]);
-      });
 
-    fetch("/api/v1/products")
-      .then((res) => res.json())
-      .then((data) => {
-        setProducts(data.data);
-      });
+        setProducts(prodData.data);
+      } catch (err) {
+        setError(err.message || "Something went wrong!");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
   }, []);
 
   const filteredProducts =
     selectedCategoryId === "all"
       ? products.slice(0, 8)
-      : products.filter((product) => product.categoryId === selectedCategoryId).slice(0,8);
+      : products
+          .filter((product) => product.categoryId === selectedCategoryId)
+          .slice(0, 8);
+
+  if (loading) {
+    return <div className="text-center mt-32 text-lg">Loading...</div>;
+  }
+
+  if (error) {
+    return (
+      <div className="text-center mt-32 text-red-500 font-semibold text-lg">
+        {error}
+      </div>
+    );
+  }
 
   return (
     <div className="mt-[200px]">
@@ -68,26 +95,30 @@ const Product = () => {
       {/* Products Grid */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-8 px-4 lg:px-[120px]">
         {filteredProducts.map((product) => (
-         <Link  key={product.id} href={`/details/${product.id}`}>
-          <div
-           
-            className="p-4 shadow-sm h-[360px] space-y-3"
-          >
-            <img
-              src={product.images[0]}
-              alt={product.productName}
-              className="w-full h-48 object-cover rounded-md mb-4 bg-[#F4F6F6]"
-            />
-            <h4 className="text-center text-[18px] font-bold">{product.productName}</h4>
-            <p className="text-[18px] lite_font text-center">${product.price}/kg</p>
-            <button className="py-3 border-[1px] border-gray-200 w-full text-center hover:text-white rounded-xl hover:bg-[#FF6A1A] text-[18px]">Add to cart</button>
-            
-          </div>
-         </Link>
+          <Link key={product.id} href={`/details/${product.id}`}>
+            <div className="p-4 shadow-sm h-[360px] space-y-3">
+              <img
+                src={product.images[0]}
+                alt={product.productName}
+                className="w-full h-48 object-cover rounded-md mb-4 bg-[#F4F6F6]"
+              />
+              <h4 className="text-center text-[18px] font-bold">
+                {product.productName}
+              </h4>
+              <p className="text-[18px] lite_font text-center">
+                ${product.price}/kg
+              </p>
+              <button className="py-3 border-[1px] border-gray-200 w-full text-center hover:text-white rounded-xl hover:bg-[#FF6A1A] text-[18px]">
+                Add to cart
+              </button>
+            </div>
+          </Link>
         ))}
       </div>
 
-      <button className="w-[203px] mt-8 mx-auto text-center flex justify-center items-center h-[53px] border-[1px] font-bold text-[18px] text-[#FF6A1A] border-[#FF6A1A]">See all products</button>
+      <button className="w-[203px] mt-8 mx-auto text-center flex justify-center items-center h-[53px] border-[1px] font-bold text-[18px] text-[#FF6A1A] border-[#FF6A1A]">
+        See all products
+      </button>
     </div>
   );
 };
